@@ -20,18 +20,25 @@ body{
 #container {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    border: 1px solid #d3d3d3;
     height: 960px;
     width: 960px;
   }
 
   .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    border: 1px solid #d3d3d3;
     height: 100%;
     width: 100%;
   }
 
-.grid-item:hover {
-    background-color: black;
+
+.active, .grid-item:hover{
+  background-color: black;
+    cursor: pointer;
+}
+
+.remove {
+  background-color: #fff;
+  cursor: pointer;
 }
