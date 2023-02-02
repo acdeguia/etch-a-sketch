@@ -4,6 +4,15 @@ let numberOfSquare = 0;
 let size = document.querySelector('#size')
 const grid = document.getElementById('container')
 
+function defaultGrid() {
+    for(i = 0; i < 256; i ++){
+        let div = document.createElement('div');
+        div.className = 'grid-item';
+        div.textContent = ''
+        container.appendChild(div)
+    }
+}
+
 function newGrid() {
     numOfSquares = prompt('number of squares per side: ')
 
@@ -16,7 +25,6 @@ function newGrid() {
             div.className = 'grid-item';
             div.textContent = ''
             container.appendChild(div)
-            console.log(numOfSquares)
         }
         document.getElementById("container").style.gridTemplateColumns = "repeat(" + numOfSquares + ", 1fr)";
     }
@@ -30,4 +38,5 @@ size.addEventListener('click', () => {
     clearGrid()
     newGrid()
 })
-    
+
+defaultGrid()
