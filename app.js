@@ -49,16 +49,72 @@ size.addEventListener('click', () => {
 
 // function to highlight clicked box
 
+let parent = document.getElementById('container')
+let square = parent.getElementsByClassName('grid-item')
+
 function active(){
-    let parent = document.getElementById('container')
-    let square = parent.getElementsByClassName('grid-item')
+    
+    for(let i = 0; i < numberOfSquare*numberOfSquare; i++){
+        square[i].addEventListener('mousedown', function(e) {
+            this.className += " active";  
+
+            square[i].onmousemove = function(e) {
+                mouseMove()
+            }
+        });
+        square[i].addEventListener('mouseup', function(e){
+            square[i].onmousemove = null
+        })
+    }
+
+}
+
+function mouseMove() {
 
     for(let i = 0; i < numberOfSquare*numberOfSquare; i++){
-        square[i].addEventListener('click', function () {
-            this.className += " active";
+        square[i].addEventListener('mousemove', function(e){
+            this.className += " active"; 
         })
     }
 }
+
+// function active(){
+    // let parent = document.getElementById('container')
+    // let square = parent.getElementsByClassName('grid-item')
+
+//     for(let i = 0; i < numberOfSquare*numberOfSquare; i++){
+//         square[i].onmousedown = function(e) {
+            
+//             if(square[i].onmousedown){
+//                 mouseMove()    
+//             }
+//         }
+//     }
+// }
+
+
+// function mouseMove() {
+//     let parent = document.getElementById('container')
+//     let square = parent.getElementsByClassName('grid-item')
+
+//     for(let i = 0; i < numberOfSquare*numberOfSquare; i++){
+//         square[i].addEventListener('mousemove', function(e){
+//             this.className += " active"; 
+//         })
+//     }
+//     mouseUp()
+// }
+
+// function mouseUp() {
+//     let parent = document.getElementById('container')
+//     let square = parent.getElementsByClassName('grid-item')
+
+//     for(let i = 0; i < numberOfSquare*numberOfSquare; i++){
+//         square[i].addEventListener('mouseup', function(e){
+//             this.className += "rainbow"
+//         })
+//     }
+// }
 
 
 defaultGrid()
