@@ -1,44 +1,81 @@
-html {
-    box-sizing: border-box;
-  }
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-    margin: 0;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
 
 body{
+  background-color: #3D5688;
     display: flex;
     height: 100vh;
     align-items: center;
     justify-content: center;
     margin: auto;
     flex-direction: column;
+    padding: 0;
+    gap: 40px;
+    font-family: 'Ivy Mode';
 }
 
 #container {
+    background: #CBB6B0;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    border: 1px solid #d3d3d3;
-    height: 500px;
-    width: 500px;
+    border: 1px solid #CBB6B0;
+    height: 700px;
+    width: 700px;
+    border: 3em solid #EFEFEF;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    flex-shrink: 0;
   }
 
   .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #d3d3d3;
     height: 100%;
     width: 100%;
+    border: 1px solid #D3D3D3;
   }
 
 
 .active, .grid-item:hover{
-  background-color: black;
+  background: #3D5688;
     cursor: pointer;
 }
 
 .remove {
   background-color: #fff;
   cursor: pointer;
+}
+
+.title {
+  
+  font-style: italic;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 63px;
+
+  color: #F9D69E;
+
+}
+
+.nav {
+  display: flex;
+  padding: 0;
+
+}
+
+.button-size {
+  height: 50px;
+  align-self: center;
+  color: #3D5688;
+  background-color: #CBB6B0;
+  padding: 10px;
+  font-style: normal;
+  font-weight: 700;
+font-size: 30px;
+	border: none;
+  font-family: 'Ivy Mode';
+	cursor: pointer;
+	outline: inherit;
 }

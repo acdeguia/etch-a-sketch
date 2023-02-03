@@ -19,7 +19,7 @@ function defaultGrid() {
 
 //funtion for changing the number of squares per side
 function newGrid() {
-    numOfSquares = prompt('number of squares per side: ')
+    numOfSquares = prompt('Enter number of squares per side: ')
 
     if(numOfSquares > 100) {
         alert('Number of square per side should be less than 100')
@@ -48,25 +48,34 @@ size.addEventListener('click', () => {
 })
 
 // function to highlight clicked box
-
+let mouseHold = false;
 let parent = document.getElementById('container')
 let square = parent.getElementsByClassName('grid-item')
 
 function active(){
     
     for(let i = 0; i < numberOfSquare*numberOfSquare; i++){
-        square[i].addEventListener('mousedown', function(e) {
-            this.className += " active";  
-
-            square[i].onmousemove = function(e) {
-                mouseMove()
-            }
-        });
-        square[i].addEventListener('mouseup', function(e){
-            square[i].onmousemove = null
+        square[i].addEventListener('mousedown', function(e){
+            this.className += " active";
+            mouseMove()
+        })
+        square[i].addEventListener("mouseup", function stop(e){
+            mouseUp()
         })
     }
+}
 
+function mouseDown() {
+    for(let i = 0; i < numberOfSquare*numberOfSquare; i++){
+        mouseHold = true
+        square[i].addEventListener('mousedown', function(e) {
+            this.className += " active";  
+            
+                 square[i].onmousemove = function(e) {
+                mouseMove()
+                }
+        }); 
+    }
 }
 
 function mouseMove() {
@@ -78,43 +87,12 @@ function mouseMove() {
     }
 }
 
-// function active(){
-    // let parent = document.getElementById('container')
-    // let square = parent.getElementsByClassName('grid-item')
-
+// function mouseUp(){
 //     for(let i = 0; i < numberOfSquare*numberOfSquare; i++){
-//         square[i].onmousedown = function(e) {
-            
-//             if(square[i].onmousedown){
-//                 mouseMove()    
-//             }
-//         }
-//     }
-// }
-
-
-// function mouseMove() {
-//     let parent = document.getElementById('container')
-//     let square = parent.getElementsByClassName('grid-item')
-
-//     for(let i = 0; i < numberOfSquare*numberOfSquare; i++){
-//         square[i].addEventListener('mousemove', function(e){
-//             this.className += " active"; 
-//         })
-//     }
-//     mouseUp()
-// }
-
-// function mouseUp() {
-//     let parent = document.getElementById('container')
-//     let square = parent.getElementsByClassName('grid-item')
-
-//     for(let i = 0; i < numberOfSquare*numberOfSquare; i++){
-//         square[i].addEventListener('mouseup', function(e){
-//             this.className += "rainbow"
+//         square[i].addEventListener('mouseup', function stop(e){
+//             square[i].removeEventListener('mousemove', mouseMove)
 //         })
 //     }
 // }
-
 
 defaultGrid()
