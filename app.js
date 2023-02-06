@@ -73,8 +73,11 @@ function mouseDown() {
             
                  square[i].onmousemove = function(e) {
                 mouseMove()
+                
                 }
-        }); 
+                
+        });
+      //
     }
 }
 
