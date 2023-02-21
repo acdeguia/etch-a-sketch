@@ -14,16 +14,16 @@
     <div id="container"></div>
     <button class="button-size" id="size">New grid</button>
 
-    <label for="grid-size">Choose a maximum house price: </label>
-<input
-  type="range"
-  name="grid-size"
-  id="grid-size"
-  min="1"
-  max="99"
-  step="1"
-  value="16" />
-<output class="output" for="grid-size"></output>
-
+    <div class="slidecontainer">
+      <input
+        type="range"
+        min="1"
+        max="99"
+        value="16"
+        class="slider"
+        id="gridRange"
+      />
+      <p>Value: <span id="grid-size"></span></p>
+    </div>
   </body>
 </html>

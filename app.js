@@ -4,6 +4,14 @@ let numberOfSquare = 0;
 let size = document.querySelector('#size')
 const grid = document.getElementById('container')
 
+const slider = document.getElementById("gridRange");
+const output = document.getElementById("grid-size");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
 //funtion for the default grid on load
 
 function defaultGrid() {
@@ -19,7 +27,7 @@ function defaultGrid() {
 
 //funtion for changing the number of squares per side
 function newGrid() {
-    numOfSquares = prompt('Enter number of squares per side: ')
+    numOfSquares = slider.value
 
     if(numOfSquares > 100) {
         alert('Number of square per side should be less than 100')
@@ -100,11 +108,3 @@ function mouseMove() {
 
 defaultGrid()
 
-const gridSize = document.querySelector("#grid-size");
-const output = document.querySelector(".output");
-
-output.textContent = gridSize.value;
-
-price.addEventListener("input", () => {
-  output.textContent = gridSize.value;
-});
