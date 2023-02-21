@@ -99,3 +99,12 @@ function mouseMove() {
 // }
 
 defaultGrid()
+
+const gridSize = document.querySelector("#grid-size");
+const output = document.querySelector(".output");
+
+output.textContent = gridSize.value;
+
+price.addEventListener("input", () => {
+  output.textContent = gridSize.value;
+});
