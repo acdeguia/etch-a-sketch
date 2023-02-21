@@ -12,18 +12,24 @@
     <h3 class="title">Etch-A-Sketch</h3>
 
     <div id="container"></div>
-    <button class="button-size" id="size">New grid</button>
+    <div class="container">
+      <p class="para">Click the button below to change grid size</p>
 
-    <div class="slidecontainer">
-      <input
-        type="range"
-        min="1"
-        max="99"
-        value="16"
-        class="slider"
-        id="gridRange"
-      />
-      <p>Value: <span id="grid-size"></span></p>
+      
+        <div class="slidecontainer">
+          <input
+            type="range"
+            min="1"
+            max="99"
+            value="16"
+            class="slider"
+            id="gridRange"
+          />
+          <p>Grid size: <span id="grid-size"></span></p>
+        </div>
+
+        <button class="button-size" id="size">New grid</button>
+      
     </div>
   </body>
 </html>
