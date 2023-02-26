@@ -1,4 +1,4 @@
-# Rock Paper Scissors
+# Etch-a-sketch
 
 <br />
 
