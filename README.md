@@ -2,7 +2,7 @@
 
 <br />
 
-⟱⟱⟱⟱⟱⟱⟱⟱⟱
+⟱⟱⟱⟱⟱⟱⟱
 
 [Live preview link](https://acdeguia.github.io/etch-a-sketch/)
 
