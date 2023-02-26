@@ -8,3 +8,4 @@
 
 <hr>
 
+![screenshot](https://github.com/acdeguia/etch-a-sketch/blob/main/screenshot.jpeg)
