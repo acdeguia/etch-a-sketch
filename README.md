@@ -2,9 +2,9 @@
 
 <br />
 
-⟱⟱⟱⟱⟱⟱
+⟱⟱⟱⟱⟱⟱⟱⟱⟱
 
-[Live preview](https://acdeguia.github.io/etch-a-sketch/)
+[Live preview link](https://acdeguia.github.io/etch-a-sketch/)
 
 <hr>
 
